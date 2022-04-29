@@ -20,5 +20,7 @@ def index(request):
     return render(request, "index.html", context)
 
 
-def showData(request):
-    return HttpResponse("Hello World")
+def ShowEmployee(request):
+    fm = EmployeeForm()
+    context = {'form': fm}
+    return render(request, 'employee.html',context)
