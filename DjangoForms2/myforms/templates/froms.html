@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" method="get">
+
+    {% for item in form.visible_fields %}
+        {{item.label_tag}}
+        {{item}}
+        {{item.help_text}}
+    <br>
+    <br>
+    {% endfor %}
+    <hr>
+    <hr>
+     {% for item in form.hidden_fields %}
+        {{item.label_tag}}
+        {{item}}
+        {{item.help_text}}
+    <br>
+    <br>
+    {% endfor %}
+</form>
+
+</body>
+</html>

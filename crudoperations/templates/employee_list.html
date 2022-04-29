@@ -1,0 +1,52 @@
+{%extends "base.html"%}
+
+{% block title %}
+View Employee's Details
+{%endblock%}
+
+{%block body%}
+
+  {% if messages %}
+<ul class="messages bg-light">
+    {%for message in messages %}
+    <li {% if message.tags %} class="text-{{message.tags}}" {%endif%}>
+            {{message}}
+    </li>
+    {%endfor%}
+
+</ul>
+ {%endif%}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+    <tr>
+        <th>Full Name</th>
+        <th>Mobile Number</th>
+        <th>Employee Code</th>
+        <th>Position</th>
+        <th colspan="2">
+            <a href="{% url 'employee_add' %}" class="btn btn-info"><i class="fa-solid fa-user-plus"></i> Add Employee</a>
+        </th>
+    </tr>
+    </thead>
+
+    {% if Employee %}
+    {% for item in Employee %}
+
+
+    <tr>
+        <td>{{item.fullname}}</td>
+        <td>{{item.mobile}}</td>
+        <td>{{item.emp_code}}</td>
+        <td>{{item.position}}</td>
+        <td><a href="{% url 'employee_update' item.id %}" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a></td>
+        <td><a href="{%url 'employee_delete' item.id %}" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Delete</a></td>
+    </tr>
+
+    {% endfor %}
+    {%else%}
+        <tr><td colspan="7" class="text-center"><h1>No Records Found</h1></td></tr>
+    {%endif%}
+
+</table>
+
+{%endblock%}

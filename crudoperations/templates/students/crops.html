@@ -1,0 +1,20 @@
+{% include 'base.html' %}
+
+{%block body%}
+
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{message}}</li>
+
+    {%endfor%}
+</ul>
+{%endif%}
+
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+
+{%endblock%}

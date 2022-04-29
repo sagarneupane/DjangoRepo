@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} From MyApp About {% endblock title %}
+{% block style %}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'myApp/css/style.css' %}">
+{% endblock style %}
+{% block content %} <h1 class="display-1">Hello I am from MyApp About page</h1>
+<button class="btn btn-primary">
+    Hello
+</button>
+{% endblock content %}
+
+{% block script %}
+<script>
+    $(document).ready(function(){
+  $("h1").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+{% endblock script %}

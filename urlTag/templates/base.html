@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}BASE HTML{% endblock title%}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    {% block style %} {% endblock style %}
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+
+<div class="container">
+    {% block navbar %}
+    <ul>
+        <li><a href="{% url 'dashboard' %}">Landing Page </a></li>
+        <li><a href="{% url 'myApp' %}">MyApp</a></li>
+        <li><a href="{% url 'yourApp' %}">yourApp</a></li>
+    </ul>
+    {% endblock navbar %}
+</div>
+
+
+{% block content %}
+{% endblock content %}
+
+
+{% block script %}
+{% endblock script %}
+</body>
+</html>

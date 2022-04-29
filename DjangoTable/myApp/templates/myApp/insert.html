@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Your Data From Here</title>
+    <link rel="stylesheet" href="{% static 'myApp/css/bootstrap.min.css' %}">
+    <style src="{% static 'myApp/js/bootstrap.min.js' %}"></style>
+</head>
+<body>
+<form action="" method="POST">
+    {% csrf_token %}
+<div class="container-fluid mt-4 p-4">
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control">
+        </div>
+        <div class="col-sm-6">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control">
+        </div>
+        <div class="col-sm-6">
+            <label for="pass">password</label>
+            <input type="password" name="password" id="pass" class="form-control">
+        </div>
+        <div class="col-sm-6">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" class="form-control">
+        </div>
+        <div class="col-sm-12">
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="col-sm-6">
+            <input type="submit" value="Submit">
+        </div>
+
+
+
+
+    </div>
+    </div>
+    
+</form>
+</body>
+</html>

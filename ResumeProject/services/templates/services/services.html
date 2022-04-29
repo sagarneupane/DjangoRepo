@@ -1,0 +1,28 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block title %}Services{% endblock title %}
+
+{% block style %}
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+{% endblock style %}
+{% block content %}
+<div class=' container text-light  mt-5 ' >
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-1 border-bottom border-warning" style="font-family: 'Orbitron', sans-serif;">Services</h1>
+        </div>
+    </div>
+        <div class="container mt-2">
+       {% include 'services/serviceslist.html' %}
+
+        </div>
+
+    </div>
+    
+</div>
+<div class="mt-2">
+
+</div>
+
+{% endblock content %}

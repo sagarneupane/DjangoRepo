@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+{% load crispy_forms_tags %}
+
+{% block title %}
+{% for item in Title %}
+{{item}}
+{%endfor%}
+{%endblock%}
+{%block body%}
+
+<form action="" method="post" autocomplete="off">
+{% csrf_token %}
+    {{form.fullname | as_crispy_field }}
+    <br>
+    {{form.mobile| as_crispy_field }}
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            {{form.emp_code| as_crispy_field }}
+        </div>
+
+        <div class="col-md-8">
+            {{form.position| as_crispy_field}}
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="row">
+             <div class="col-md-4">
+                <button type="submit" class="btn btn-success btn-lg form-control"><i class="fa-solid fa-database"></i> Save</button>
+            </div>
+        <div class="col-md-8">
+            <a href="{% url 'employee_list' %}" class="btn btn-info btn-lg form-control"><i class="fa-solid fa-list"></i> Back To List</a>
+        </div>
+    </div>
+
+
+</form>
+
+{% endblock %}

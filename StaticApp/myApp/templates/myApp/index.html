@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+    <link rel="stylesheet" href="{% get_static_prefix %}myApp/css/style.css">
+</head>
+<body>
+    <h1>
+        {{myApp}}
+    </h1>
+<h2>{{Date}}</h2>
+<button onclick="showAlert()">Hello</button>
+
+    <script src="{% get_static_prefix %}myApp/js/index.js"></script>
+</body>
+</html>

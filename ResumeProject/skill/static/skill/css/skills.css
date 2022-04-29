@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Orbitron:wght@700&family=Oswald:wght@300&display=swap');
+.merriweather
+{
+    font-family: 'Merriweather', serif;
+}
+.oswald
+{
+    font-family: 'Oswald', sans-serif;
+}
+.text-pink
+{
+    color:pink;
+}
+.text-aqua
+{
+    color:aqua;
+}
+.text-white
+{
+    color:white;
+}
+.bg-aqua
+{
+    background-color: aqua;
+}
+.bg-purple{
+    background-color: rgb(145, 7, 152);
+}
+.letter-spacing-2{
+    letter-spacing: 2px;
+}
+.text-red{
+    color:rgb(248, 73, 73);
+    background: -webkit-linear-gradient(rgb(255, 40, 40), rgb(243, 97, 97));
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+.text-blue
+{
+    color:cornflowerblue;
+}

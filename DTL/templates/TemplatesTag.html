@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template Tag</title>
+</head>
+<body>
+
+<h1>IF TAG</h1>
+{% if name == "" %}
+<h3>Hello </h3>
+{%else%}
+<h3>HI {{name}}</h3>
+{%endif%}
+
+{% if name == "sagar" and age == 24 %}
+<h1>You can vote</h1>
+
+{% endif %}
+
+</body>
+</html>

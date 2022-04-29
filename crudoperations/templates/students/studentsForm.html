@@ -1,0 +1,111 @@
+
+{% extends 'students/base.html'%}
+{% load crispy_forms_tags %}
+{%block title%}Student Registration{%endblock%}
+
+{%block body%}
+
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6">
+            {{form.studentName| as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+            {{form.studentAddress| as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+            {{form.phoneNumber| as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+            {{form.course| as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+            {{form.birth_date | as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+        {{form.email| as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+            {{form.age | as_crispy_field}}
+        </div>
+        <br>
+        <div class="col-md-4">
+            <br>
+            <button type="submit" class="btn btn-success">Add Student</button>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <a href="{% url 'studentList' %}" class="btn btn-primary">Back To Student List</a>
+        </div>
+
+
+    </div>
+
+
+</form>
+{%endblock%}
+{%block script %}
+<script>
+
+
+
+ var birth_date = document.getElementById("id_birth_date");
+ birth_date.addEventListener("focusout",calculateAge);
+
+
+function calculateAge(){
+let birth_date = document.getElementById("id_birth_date")
+let birth_date_value = birth_date.value
+
+birth_date_arr = birth_date_value.split("-")
+console.log(birth_date_arr)
+var currentTime = new Date()
+var birth_day = birth_date_arr[2]
+var birth_month = birth_date_arr[1]
+var birth_year = birth_date_arr[0]
+var dd = String(currentTime.getDate()).padStart(2,'0')
+var mm = String(currentTime.getMonth()+1).padStart(2,'0')
+var yyyy = currentTime.getFullYear()
+
+birth_year = Math.abs(birth_year - yyyy)
+
+if(birth_month<mm){
+    birth_year+=1
+
+}
+else{
+ if(birth_month==mm)
+ {
+    if(birth_day < dd)
+    {
+    birth_year +=1
+    }
+    else if(birth_day==dd){
+    birth_year+=1
+    }
+    else{
+    console.log("ntg")
+    }
+ }
+ else
+ {
+ console.log("ntg again")
+ }
+}
+
+
+console.log(birth_day,birth_month,birth_year)
+
+//var days_total = birth_year
+
+
+var age = document.getElementById("id_age")
+age.value = birth_year
+age.setAttribute("readonly","true")
+console.log("Hello World")
+}
+
+</script>
+{% endblock %}
+

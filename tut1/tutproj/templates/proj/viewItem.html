@@ -1,0 +1,16 @@
+{% extends "proj/base.html"%}
+
+{% block title %}
+View Item
+{%endblock%}
+
+{% block body%}
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{%endblock%}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{form}}
+<label for="{{ form.email.id_for_label }}">{{form.email.label}}</label>
+{{form.email}}
+
+{{form.email.label_tag}}
+
+{{form.name.value}}<br>
+{{form.name.html_name}}<br>
+{{form.name.help_text}}
+</body>
+</html>

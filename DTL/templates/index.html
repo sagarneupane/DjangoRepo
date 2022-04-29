@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Data</title>
+    <style>
+
+        body
+        {
+        background:linear-gradient(rgba(4, 151,154,0.8),rgba(144,154,144,0.7));
+        height:100%;
+        }
+    </style>
+</head>
+<body>
+<h1>
+    Hello, My name is {{name}}. I am {{age}} years old. I am {{job}} by profession. I have  monthly salary about Rs.{{salary}}
+
+
+</h1>
+<h2>
+    {{ name | upper }}<br>
+
+    {{name|lower}}
+
+</h2>
+<p>
+    {{article}}
+    <br>
+    {{article| truncatewords:130}}
+
+</p>
+
+<h1>{{article|length}}</h1>
+
+<h1>NExt Paragraph Using Double Filter</h1>
+<p>
+{{article|upper|truncatewords:40}}
+</p>
+<h3>{{heading | default:"THis is Heading 3"}}</h3>
+<p>{{article| capfirst}}</p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DateTime Filter</title>
+</head>
+<body>
+
+<h1>{{value}}</h1>
+<h4>Let's See How Datetime looks like using Decorator</h4>
+<h1>Long Date Filter: {{datetime| date:" dS F l Y"}}</h1>
+<h1>Short Date Filter: {{datetime| date:" dS M D Y"}}</h1>
+<h3>Time Filter: {{datetime| time:"h:i:s A"}}</h3>
+<h2>TimeZone: {{datetime | date:"T"}} ,<br> Difference to Greenwich time in hours {{datetime| date:"O"}} ,<br>
+TimeZone Format US/Eastern:: {{datetime| date:"US/Eastern"}}</h2>
+<h2>Timezone Format in GMT:: {{datetime | date:"GMT"}}</h2>
+<h2>Timezone Format in Asia Kathmandu :: {{datetime | date:"Asia/Kathmandu"}}</h2>
+
+<h1 style="background:#aeee00;">DateTime Format::______:__________PREDEFINED........</h1>
+<h2>{{datetime| date:"DATE_FORMAT"}}</h2>
+<h2>{{datetime| date:"DATETIME_FORMAT"}}</h2>
+<h2>{{datetime| date:"SHORT_DATE_FORMAT"}}</h2>
+<h2>{{datetime| date:"SHORT_DATETIME_FORMAT"}}</h2>
+<h2>{{datetime| date:"TIME_FORMAT"}}</h2>
+</body>
+</html>

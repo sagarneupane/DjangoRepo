@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{block.super}} From About{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'yourApp/css/style.css' %}"> {% endblock style %}
+
+{% block content %} {{ block.super }} <h1>Hello World From About using  Template Inheritance.It is the most beautiful part of Django Templates Language</h1>
+<p>{{date| date:' D M Y'}}</p>
+
+<img src="{% static 'yourApp/img/my.jpg'%}" alt="" height="450px" width="650px">
+{% endblock content %}

@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}
+Contact Me
+{% endblock title %}
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'skill/css/skills.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="merriweather text-white border-bottom border-warning mb-5">Contact </h1>
+
+    <div class="row text-white mb-5">
+        <p class="mx-auto mb-5">Do you have any Questions? Please donot hesitate to contact. I will come 
+            back to you within the matter of hours of to help you
+        </p>
+        <div class="col-sm-9 mb-5">
+            <form action="">
+                <div class="form row">
+                    <div class="form-group col-md-6 mb-2">
+                        <label for="inputName">Your Name</label>
+                        <input type="text" name="" id="inputName" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Email</label>
+                        <input type="Email" name="" id="inputEmail" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSubject">Your Subject</label>
+                        <input type="text" name="" id="inputSubject" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTextArea">Your Message</label>
+                        <textarea  class="form-control" name="" id="inputTextArea" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value="Send" class="btn btn-outline-info px-3">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3 text-center">
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fas fa-map-marker-alt fa-2x text-aqua mb-1"></i>
+                    <p class="oswald">Kohalpur-12, Banke,Nepal</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone fa-2x text-aqua mt-4 mb-1"></i>
+                    <p class="oswald">+977-124 255 1112</p>
+                </li>
+                <li>
+                    
+                    <i class="fa-solid fa-envelope-circle-check fa-2x text-aqua mt-4 mb-1"></i>
+                    <p class="oswald">djangodeveloper@django.com</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <a href="#"><i class="fa-brands fa-twitter fa-2x text-info p-2"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook fa-2x text-primary p-2"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram fa-2x text-red p-2"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin fa-2x text-blue p-2 "></i></a>
+
+</div>
+{% endblock content %}

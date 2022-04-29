@@ -1,0 +1,17 @@
+{% load static %}
+<div class="col-sm-2">
+    <div class="border-end border-warning h-100">
+        <div class="text-center">
+            <img src="{% static 'core/img/abi2.jpg' %}" alt="" class="img-fluid rounded-circle mt-5" height="100px" width="100px" >
+        </div>
+        <h3 class=" text-center text-light mt-4 ml-1 mr-1 p-2" style="font-family: 'My Soul', cursive;">Abishek Neupane</h3>
+        <hr class="border-bottom border-light"> 
+        <nav class="nav flex-column text-center">
+            <a href="{% url 'index' %}" class="nav-link {{home}}">Home</a>
+            <a href="{% url 'skills' %}" class="nav-link {{skills}}">Skills</a>
+            <a href="{% url 'services' %}" class="nav-link {{services}}">Services</a>
+            <a href="{% url 'contact' %}" class="nav-link {{contact}}">Contact</a>
+        </nav>
+    </div>
+   
+</div>

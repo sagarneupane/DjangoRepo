@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Loop</title>
+</head>
+<body>
+<ul>
+    {% for key,value in age.items %}
+    <tr>
+        {{forloop.counter0}}
+        {{forloop.revcounter0}}
+        {{forloop.counter}}
+        {{forloop.revcounter}}
+        <th>{{key}}:: {{value}}</th>
+        <br>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <th>NO values in Dictionary</th>
+    </tr>
+
+{% endfor %}
+</ul>
+
+
+
+<ul>
+    {% for item in list %}
+    <li>{{forloop.counter}}.  {{item}}</li>
+    {% empty %}
+    <li>No Values in List</li>
+{% endfor %}
+</ul>
+
+
+<table>
+
+
+    {% for key,value in student.items %}
+
+    <tr>
+
+        {% for key,value in value.items %}
+        {{ forloop.parentloop.counter }}
+        <th>{{key}}</th>
+        <td>{{value}}</td>
+
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+</body>
+</html>

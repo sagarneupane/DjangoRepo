@@ -1,0 +1,38 @@
+
+{% extends 'students/base.html'%}
+
+{%block title%}Student List{%endblock%}
+
+{%block body%}
+
+
+    <table class="table table-borderless">
+        <tr class="border-bottom">
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Date Of Birth</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Course Enrolled</th>
+            <th colspan="2"><a href="{% url 'CreateStudent' %}" class="btn btn-info"><i class="fa-solid fa-user-plus"></i> Add Students</a></th>
+        </tr>
+
+        {%for item in students %}
+            <tr>
+                <td>{{item.studentName}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phoneNumber}}</td>
+                <td>{{item.birth_date}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.studentAddress}}</td>
+                <td>{{item.course}}</td>
+                <td><a href="{% url 'updateStudent' item.id %}" class="btn btn-warning"><i class="fa-solid fa-user-pen"></i> Edit</a></td>
+                <td><a href="#" class="btn btn-danger"><i class="fa-solid fa-user-slash"></i> Delete</a></td>
+            </tr>
+        {%endfor %}
+
+    </table>
+
+
+{%endblock%}
